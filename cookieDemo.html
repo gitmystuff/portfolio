@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Demo</title>
+</head>
+<body>
+    <h1>Cookie Demo</h1>
+    <button id="setCookieButton">Set Cookie</button>
+    <button id="getCookieButton">Get Cookie</button>
+    <div id="cookieDisplay"></div>
+
+    <script>
+        document.getElementById('setCookieButton').addEventListener('click', function() {
+            document.cookie = "demo_user=JohnDoe; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/";
+            alert("Cookie set!");
+        });
+
+        document.getElementById('getCookieButton').addEventListener('click', function() {
+            document.getElementById('cookieDisplay').textContent = "Cookies: " + document.cookie;
+        });
+    </script>
+</body>
+</html>
