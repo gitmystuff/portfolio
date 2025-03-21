@@ -36,9 +36,28 @@ function checkCookie() {
      }
   }
 }
+
+
+
+    <script>
+        document.getElementById('setCookieButton').addEventListener('click', function() {
+            checkCookie()
+        });
+
+        document.getElementById('getCookieButton').addEventListener('click', function() {
+            document.getElementById('cookieDisplay').textContent = "Cookies: " + document.cookie;
+        });
+    </script>
+
 </script>
 </head>
 
-<body onload="checkCookie()"></body>
+<body>
+<h1>Cookie Demo</h1>
+    <button id="setCookieButton">Set/Check Cookie</button>
+    <button id="getCookieButton">Get Cookie</button>
+    <div id="cookieDisplay"></div>
+
+</body>
 
 </html>
