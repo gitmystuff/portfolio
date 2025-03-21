@@ -37,18 +37,6 @@ function checkCookie() {
   }
 }
 
-
-
-    <script>
-        document.getElementById('setCookieButton').addEventListener('click', function() {
-            checkCookie()
-        });
-
-        document.getElementById('getCookieButton').addEventListener('click', function() {
-            document.getElementById('cookieDisplay').textContent = "Cookies: " + document.cookie;
-        });
-    </script>
-
 </script>
 </head>
 
@@ -57,6 +45,16 @@ function checkCookie() {
     <button id="setCookieButton">Set/Check Cookie</button>
     <button id="getCookieButton">Get Cookie</button>
     <div id="cookieDisplay"></div>
+
+    <script>
+        document.getElementById('setCookieButton').addEventListener('click', function() {
+            checkCookie();
+        });
+
+        document.getElementById('getCookieButton').addEventListener('click', function() {
+            document.getElementById('cookieDisplay').textContent = "Cookies: " + document.cookie;
+        });
+    </script>
 
 </body>
 
